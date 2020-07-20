@@ -1,3 +1,9 @@
+//service worker
+if ("serviceWorker" in navigator) {
+  // register service worker
+  navigator.serviceWorker.register("service-worker.js");
+}
+
 //global variables
 var count = Number(window.localStorage.getItem('count'));
 if (!count) {
@@ -48,7 +54,7 @@ function createNoteFromInput(event) {
     window.localStorage.setItem('count', count);
 
     if(window.localStorage.getItem(title)){
-        title += 'copy';
+        title += ' -copy';
     }
     window.localStorage.setItem(title, body)
     //calling the create note function
@@ -83,4 +89,25 @@ for (i = 0; i < count + 1; i++) {
 }
 //event  to trigger the remove item function
 document.querySelector('#notes')
-    .addEventListener('click', removeItem)
+    .addEventListener('click', removeItem);
+
+//serch funtionality
+function searchIt() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("notes");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}

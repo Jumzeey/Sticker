@@ -12,6 +12,14 @@
     <title>Sticky</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+    <link rel="mask-icon" href="/image/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Sticky">
+    <meta name="application-name" content="Sticky">
+    <meta name="msapplication-TileColor" content="#333333">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/main.css">
     <link rel="manifest" href="manifest.json">
 </head>
@@ -21,7 +29,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div id='header'>
-        <h1>Sticker</h1>
+        <h1>Sticky</h1>
         <p id='ts'>By Jumzeey</p>
     </div>
     <div id='form'>
@@ -31,7 +39,7 @@
             <input type='text' name='content' id='new-note-content' class='inputText' placeholder='note content...'
                 autocomplete='off' required>
             <button type='submit' onclick="createNoteFromInput(event)" class='btn'>Create note</button>
-            <input type='text' id='myInput' class='inputText search' placeholder='search notes...' autocomplete='off'>
+            <input type='text' id='myInput' class='inputText search' placeholder='search notes...' autocomplete='off' onkeyup="searchIt()">
         </form>
     </div>
     <div>
