@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sticky</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id='header'>
+        <h1>Sticker</h1>
+        <p id='ts'>By Jumzeey</p>
+    </div>
+    <div id='form'>
+        <form id='inputForm'>
+            <input type='text' name='title' id='new-note-title' class='inputText' placeholder='note title...' autofocus
+                autocomplete='off' required>
+            <input type='text' name='content' id='new-note-content' class='inputText' placeholder='note content...'
+                autocomplete='off' required>
+            <button type='submit' onclick="createNoteFromInput(event)" class='btn'>Create note</button>
+            <input type='text' id='myInput' class='inputText search' placeholder='search notes...' autocomplete='off'>
+        </form>
+    </div>
+    <div>
+        <h3 id='no-notes'>No notes found, add one!</h3>
+        <ul id='notes'>
+           
+        </ul>
+    </div>
+    <script src="js/script.js" async defer></script>
+</body>
+
+</html>
